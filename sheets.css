@@ -1,0 +1,166 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  z-index: 1000; /* Ensure it stays on top */
+  transition: background-color 0.3s ease-in-out;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  min-height: 100vh; /* Ensure sections have a minimum height to enable scrolling */
+  border: 2px solid red; /* Temporary visual aid */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.myintro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.intro1 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-style: dotted;
+  background: #333;
+}
+
+.intro2 {
+  flex: 1.7;
+  padding: 20px;
+  box-sizing: border-box;
+  border-style: dotted;
+}
+
+@media (max-width: 768px) {
+  .myintro {
+      flex-direction: column;
+  }
+
+  .intro1, .intro2 {
+      flex: 1;
+  }
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+}
+
+/* Back to Top Button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#topBtn:hover {
+  background-color: #555;
+}
